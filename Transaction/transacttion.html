@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction System - Order History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="transaction.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Order History</h1>
+        <div class="row mb-4">
+            <div class="col-md-4 mb-2">
+                <input type="text" id="customerFilter" class="form-control" placeholder="Filter by customer name">
+            </div>
+            <div class="col-md-4 mb-2">
+                <input type="date" id="dateFilter" class="form-control">
+            </div>
+            <div class="col-md-4">
+                <button id="applyFilter" class="btn btn-primary me-2">Apply Filter</button>
+                <button id="resetFilter" class="btn btn-secondary">Reset Filter</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table id="orderTable" class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Customer Orders</th>
+                        <th>Date</th>
+                        <th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody id="orderTableBody">
+                    <!-- Order rows will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="transaction.js"></script>
+</body>
+</html>
